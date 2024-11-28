@@ -1,0 +1,72 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#heroSection {
+    background-image: url("../images/Web-background 2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gradient {
+    @apply absolute top-0 bottom-0 right-0 left-0 bg-gray-500 opacity-40 rounded-xl md:opacity-0 group-hover:opacity-40;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+    display: none;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+h5 {
+    @apply absolute px-6 text-3xl duration-500 w-52 md:opacity-0 text-white md:px-10 bottom-4 md:bottom-8 group-hover:opacity-100 group-hover:text-white group-hover:scale-110;
+}
+
+@media (max-width: 576px) {
+    #heroSection {
+        background-image: url("../images/Mobile sc.png");
+        background-repeat: no-repeat;
+        background-size: center;
+    }
+}
